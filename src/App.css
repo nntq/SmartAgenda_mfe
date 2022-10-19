@@ -1,0 +1,251 @@
+.add__title{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
+
+.added{
+  position: absolute;
+  top: 5%;
+  background-color: rgb(198, 243, 198);
+  color: green;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+
+
+.users__btn{
+  border: 2px solid rgb(49, 49, 49);
+    text-decoration: none;
+    color: black;
+    padding: 5px 20px;
+    border-radius: 10px;
+    align-self: center;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.users__btn:hover{
+  transition: all 1s;
+  background-color: rgb(49, 49, 49);
+  color: white;
+}
+
+.title{
+  width: 300px;
+  background-color: rgb(49, 49, 49);
+  text-align: center;
+  padding: 15px;
+  margin: 20px auto;
+  color: rgb(164, 226, 255);
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.add__form{
+  margin: 0;
+  padding: 20px 70px 30px 70px;
+  width: 300px;
+  min-height: 500px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 32px 21px rgba(0,0,0,0.1);
+}
+
+.add__form__title{
+  margin-bottom: 0;
+}
+
+.form__description{
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 11px;
+}
+
+.err__msg{
+  background-color: rgb(255, 174, 174);
+  color: red;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
+.add__form > input{
+  border: none;
+  border-bottom: 2px solid rgb(182, 182, 182);
+  width: 100%;
+  margin: 0;
+}
+
+.tags{
+  display: flex;
+  justify-content: space-between;
+}
+
+.input__tags{
+  width: 60%;
+  border: none;
+  border-bottom: 2px solid rgb(182, 182, 182);
+  margin: 0;
+}
+
+.input__tags:focus{
+  outline: none;
+  border-bottom-color: black;
+}
+
+.add__tag{
+  width: 25%;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.show__tags{
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.show__tags > span{
+  position: relative;
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+
+.delete__tag{
+  position: absolute;
+  right: 2px;
+  top: -2px;
+  cursor: pointer;
+}
+
+.delete__tag > svg{
+  width: 8px;
+  height: 8px;
+  color: red;
+}
+
+.photo{
+  margin-top: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+}
+
+.photo > svg{
+  align-self: center;
+}
+
+.upload__file{
+  background-color: rgb(164, 226, 255);
+  width: 200px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.upload__file > svg{
+  align-self: center;
+  color: rgb(11 206 11);
+}
+
+.add__form > input:focus{
+  outline: none;
+  border-bottom-color: black;
+}
+
+.add__form > button{
+  border: none;
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 10px 0;
+  float: right;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+
+/* LIST */
+
+.users__list{
+  margin: 10px;
+  padding: 10px 70px;
+  min-width: 280px;
+  height: 620px;
+  box-shadow: 0px 10px 32px 21px rgba(0,0,0,0.1);
+}
+
+.users__list > input{
+  width: 200px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  border-color: black;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+
+.users__list > input:focus{
+  outline: none;
+  border: 2px solid rgb(146, 219, 253);
+}
+
+.users__list__connections{
+  height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.users__list__connections::-webkit-scrollbar {
+  width: 15px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+
+.users__list__connections::-webkit-scrollbar-thumb{
+  background-color: black;
+}
+
+.list__item{
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.list__item > p{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;  
+}
+
+.list__item >p>span{
+  width: max-content;
+  margin: 0 10px;
+}
+
+.list__item > h3{
+  margin-top: 0;
+}
+
+.selected{
+  border-color: rgb(146, 219, 253);
+}

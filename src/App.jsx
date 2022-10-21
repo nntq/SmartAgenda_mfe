@@ -21,11 +21,9 @@ function App(){
     tags: [],
     selected: []
   });
-  const [selected, setSelected] = React.useState([]);
   const [search, setSearch] = React.useState('');
   const [err, setErr] = React.useState({});
   const [notify, setNotify] = React.useState(false);
-  const [tags, setTags] = React.useState([]);
 
   React.useEffect(()=>{
     loadData().then(value =>{
@@ -97,13 +95,6 @@ function App(){
       .ilike('phone','%'+search+'%')
     }
 
-    // if(user.data.length === 0){
-    //   user = await supabase
-    //   .from('user_table')
-    //   .select('*')
-    //   .ilike('tag','%'+search+'%')
-    // }
-
     if(user.data.length === 0){
       const allTags = [];
       let outTags = [];
@@ -151,8 +142,6 @@ function App(){
     const out = await supabase
     .rpc('add_user', user);
 
-    console.log(out);
-
     for(let el in form.selected){
       const { data, error } = await supabase
       .from('collegato')
@@ -178,7 +167,6 @@ function App(){
   async function submit(e){
     e.preventDefault();
     const user = [{first_name: form.name, last_name: form.surname, company: form.company, email: form.email, phone: form.phone, tag: form.tags}]
-    console.log(user);
     let out = validation(form)
     setErr(out)
 

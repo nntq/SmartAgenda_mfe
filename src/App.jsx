@@ -228,10 +228,11 @@ function App(){
   )
 }
 // ReactDOM.render(<App />, document.getElementById("app"));
-class Mfe4Element extends HTMLElement {
+
+class MicroFrontendToElement extends HTMLElement {
   connectedCallback() {
     ReactDOM.render(<App/>, this);
   }
 }
 
-customElements.define('react-element', Mfe4Element);
+customElements.define('react-element', MicroFrontendToElement);
